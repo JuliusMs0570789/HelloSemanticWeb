@@ -117,9 +117,7 @@ public class HelloSemanticWeb {
 		System.out.println("\nSay hello to my gmail friends only wo entailments");
 		System.out.println("\nSuccess!");
 	}
-	
 
-	
 	private void populateFOAFFriends(){
 		_friends = ModelFactory.createOntologyModel();
 		InputStream inFoafInstance = FileManager.get().open("Ontologies/FOAFFriends.rdf");
@@ -139,10 +137,6 @@ public class HelloSemanticWeb {
 		runQuery(" select DISTINCT ?myname ?name where{  people:me foaf:knows ?friend. ?friend foaf:name ?name } ", model);  //add the query string
 
 	}
-	
-
-	
-	
 	
 	private void populateNewFriends() throws IOException {		
 		InputStream inFoafInstance = FileManager.get().open("Ontologies/additionalFriends.owl");
@@ -236,7 +230,6 @@ public class HelloSemanticWeb {
 			}
 		} finally { qexec.close();}				
 		}
-		
 	
 	private void runJenaRule(Model model){
 		String rules = "[emailChange: (?person <http://xmlns.com/foaf/0.1/mbox> ?email), strConcat(?email, ?lit), regex( ?lit, '(.*@gmail.com)') -> (?person <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://org.semwebprogramming/chapter2/people#GmailPerson>)]";
