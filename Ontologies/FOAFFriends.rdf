@@ -10,30 +10,40 @@
   <admin:errorReportsTo rdf:resource="mailto:leigh@ldodds.com"/>
 </foaf:PersonalProfileDocument>
 <foaf:Person rdf:ID="me">
-<foaf:name>Semantic Web</foaf:name>
-<foaf:title>Dr</foaf:title>
-<foaf:givenname>Semantic</foaf:givenname>
-<foaf:family_name>Web</foaf:family_name>
-<foaf:nick>Webby</foaf:nick>
-<foaf:homepage rdf:resource="http://semwebprogramming.org"/>
-<foaf:depiction rdf:resource="http://semwebprogramming.org/semweb.jpg"/>
-<foaf:phone rdf:resource="tel:410-679-8999"/>
-<foaf:workplaceHomepage rdf:resource="http://semwebprogramming.com"/>
-<foaf:workInfoHomepage rdf:resource="http://semwebprogramming.com/dataweb.html"/>
-<foaf:schoolHomepage rdf:resource="http://www.web.edu"/>
+<foaf:name>Marcel-Julius Kühnau-Schultz</foaf:name>
+<foaf:title>Mr</foaf:title>
+<foaf:givenname>Marcel-Julius</foaf:givenname>
+<foaf:family_name>Kühnau-Schultz</foaf:family_name>
+<foaf:nick>MaJu</foaf:nick>
+<foaf:homepage rdf:resource="https://www.juliusschultz.com"/>
+<foaf:depiction rdf:resource="https://www.juliusschultz.com/_nuxt/blick-nach-oben.546YVyon.jpeg"/>
+<foaf:phone rdf:resource="tel:123456789"/>
+<foaf:workplaceHomepage rdf:resource="https://www.diva-e.com"/>
+<foaf:workInfoHomepage rdf:resource="https://www.diva-e.com"/>
+<foaf:schoolHomepage rdf:resource="https://www.htw-berlin.de/"/>
 <foaf:knows>
-<foaf:Person rdf:ID="Ontology">
-<foaf:name>I. M. Ontology</foaf:name>
-<foaf:mbox rdf:resource="mailto:ont@gmail.com"/>
+<foaf:Person rdf:ID="Martina">
+<foaf:name>Martina Freitag</foaf:name>
+<foaf:mbox rdf:resource="mailto:martina.freitag@gmail.com"/>
 <rdfs:seeAlso rdf:resource="http://ont.com"/></foaf:Person></foaf:knows>
 <foaf:knows>
-<foaf:Person rdf:ID="Reasoner">
-<foaf:name>Ican Reason</foaf:name>
-<foaf:mbox rdf:resource="mailto:reason@firefox.com"/>
+<foaf:Person rdf:ID="Ibrahim">
+<foaf:name>Ibrahim Katorov</foaf:name>
+<foaf:mbox rdf:resource="mailto:ibrahim.kotarov@firefox.com"/>
 <rdfs:seeAlso rdf:resource="http://reasoner.com"/></foaf:Person></foaf:knows>
 <foaf:knows>
-<foaf:Person rdf:ID="Statement">
-<foaf:name>Makea Statement</foaf:name>
-<foaf:mbox rdf:resource="mailto:mstatement@gmail.com"/>
+<foaf:Person rdf:ID="Ferdinando">
+<foaf:name>Ferdinandez Ramirez</foaf:name>
+<foaf:mbox rdf:resource="mailto:ferdinando@gmail.com"/>
+<rdfs:seeAlso rdf:resource="http://ont.com"/></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person rdf:ID="Pratz">
+<foaf:name>Gregor Pratz</foaf:name>
+<foaf:mbox rdf:resource="mailto:gregor.pratz@gmx.de"/>
+<rdfs:seeAlso rdf:resource="http://ont.com"/></foaf:Person></foaf:knows>
+<foaf:knows>
+<foaf:Person rdf:ID="Oygül">
+<foaf:name>Soya Oygül</foaf:name>
+<foaf:mbox rdf:resource="mailto:oygül@web.de"/>
 <rdfs:seeAlso rdf:resource="http://statement.com"/></foaf:Person></foaf:knows></foaf:Person>
 </rdf:RDF>
