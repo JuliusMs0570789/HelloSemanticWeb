@@ -24,11 +24,10 @@ import com.hp.hpl.jena.util.FileManager;
 
 public class HelloSemanticWeb {
 	static String defaultNameSpace = "http://org.semwebprogramming/chapter2/people#";
-	
 	Model _friends = null;
 	Model schema = null;
 	InfModel inferredFriends = null;
-	String message = "Hello to ";
+	static String message = "Hello to ";
 
 	public static void main(String[] args) throws IOException {
 		
@@ -44,7 +43,7 @@ public class HelloSemanticWeb {
 		
 		// Say Hello to my FOAF Friends
 		System.out.println("\nSay Hello to my FOAF Friends");
-		hello.myFriends(hello._friends, "Hello to ");
+		hello.myFriends(hello._friends, message);
 		
 		//Add my new friends
 		System.out.println("\nadd my new friends");
@@ -52,7 +51,7 @@ public class HelloSemanticWeb {
 		
 		//Say hello to my friends - hey my new ones are missing?
 		System.out.println("\nSay hello to all my friends - hey the new ones are missing!");
-		hello.myFriends(hello._friends, "Hello to ");
+		hello.myFriends(hello._friends, message);
 		
 		// Add the ontologies
 		System.out.println("\nAdd the Ontologies");
@@ -61,7 +60,7 @@ public class HelloSemanticWeb {
 		
 		//See if the ontologies help identify my new friends? Nope!
 		System.out.println("\nSee if the ontologies help to say hello to all my friends - Nope!");
-		hello.myFriends(hello._friends, "Hello to ");
+		hello.myFriends(hello._friends, message);
 		
 		//Align the ontologies to bind my friends together
 		System.out.println("\nOk, lets add alignment statements for the two ontologies.");
@@ -69,7 +68,7 @@ public class HelloSemanticWeb {
 		
 		//Now say hello to my friends - nope still no new friends!
 		System.out.println("\nTry again - Hello to all my friends - nope still not all!");
-		hello.myFriends(hello._friends, "Hello to ");
+		hello.myFriends(hello._friends, message);
 		
 		//Run reasoner to  align the instances
 		System.out.println("\nRun a Reasoner");
@@ -79,7 +78,7 @@ public class HelloSemanticWeb {
 		
 		//Say hello to all my friends
 		System.out.println("\fFinally- Hello to all my friends!");
-		hello.myFriends(hello.inferredFriends, "Hello to ");
+		hello.myFriends(hello.inferredFriends, message);
 	
 		
 		// Say hello to my self again - oh no there are two of us!
@@ -99,7 +98,7 @@ public class HelloSemanticWeb {
 		
 		// Just to make sure I didn't mess up anything - say hello to my all my friends again
 		System.out.println("\nJust checking that I didn't mess anthing up - Say hello to all my friends again.");
-		hello.myFriends(hello.inferredFriends, "Hello to ");
+		hello.myFriends(hello.inferredFriends, message);
 		
 		//One more thing - now we can set a restriction
 		System.out.println("\nEstablishing a restriction to just get email friends");
@@ -164,7 +163,6 @@ public class HelloSemanticWeb {
 		prop = schema.createProperty("http://www.w3.org/2000/01/rdf-schema#subPropertyOf");
 		obj = schema.createResource("http://xmlns.com/foaf/0.1/knows");
 		schema.add(resource,prop,obj);
-		
 		
 		//State that sem web is the same person as Semantic Web
 		resource = schema.createResource("http://org.semwebprogramming/chapter2/people#me");
@@ -257,30 +255,17 @@ public class HelloSemanticWeb {
     public static void printIterator(Iterator i, String header) {
 
         System.out.println(header);
-
         for(int c = 0; c < header.length(); c++)
-
             System.out.print("=");
-
         System.out.println();
-       
 
         if(i.hasNext()) {
-
-	        while (i.hasNext()) 
-
+	        while (i.hasNext())
 	            System.out.println( i.next() );
-
-        }       
-
+        }
         else
-
             System.out.println("<EMPTY>");
-
-        
-
         System.out.println();
-
     }
 
     public void setRestriction(Model model) throws IOException{
@@ -305,11 +290,9 @@ public class HelloSemanticWeb {
     public void myEmailFriends(Model model){
      	//just get all my email friends only - ones with email
 		runQuery(" select DISTINCT ?name where{  ?sub rdf:type <http://org.semwebprogramming/chapter2/people#EmailPerson> . ?sub foaf:name ?name } ", model, "Hello to ");  //add the query string
-
     }
     
     public void myGmailFriends(Model model){
 		runQuery(" select DISTINCT ?name where{  ?sub rdf:type people:GmailPerson. ?sub foaf:name ?name } ", model, "Hello to ");  //add the query string
-   	
     }
 }
